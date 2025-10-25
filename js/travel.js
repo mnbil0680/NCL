@@ -1,38 +1,78 @@
 // Cruise data
 const cruises = [
     {
-        id: 1,
-        title: "رحلة ساوثبتون الأوروبية",
-        duration: "11 أيام",
-        ship: "أروى المحيط",
-        route: "ساوثبتون(بريطانيا) - اوروبا",
-        departure: "ساوثبتون",
-        arrival: "اوروبا",
-        image: "https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg",
-        highlights: ["برج إيفل", "ساجرادا فاميليا", "الكولوسيوم"],
-    },
+    id: 1,
+    title: "رحلة فينيسيا الإيطالية",
+    duration: "11 ليلة",
+    ship: "Norwegian Viva",
+    route: "فينيسيا (ترييستي) - زادار - فينيسيا (رافينا) - دوبروفنيك - كوتور - كورفو - فاليتا - ميسينا - نابولي (بومبي) - ليفورنو (فلورنسا/بيزا) - كان - تشيفيتافيكيا (روما)",
+    departure: "فينيسيا (ترييستي)، إيطاليا",
+    arrival: "روما (تشيفيتافيكيا)، إيطاليا",
+    image: "https://contents.odysol.com//content/Images/Destination/9/Gallery/Virgin_Island.jpg",
+    highlights: [
+        "دوبروفنيك القديمة",
+        "فاليتا، مالطا",
+        " نابولي وبومبي",
+        "روما ومعالمها التاريخية"
+    ],
+}
+,
     {
-        id: 2,
-        title: "رحلة الخليج الذهبية",
-        duration: "7 أيام",
-        ship: "أروى الملكية",
-        route: "دبي - الدوحة - الكويت",
-        departure: "دبي",
-        arrival: "دبي",
-        image: "https://images.pexels.com/photos/2467287/pexels-photo-2467287.jpeg",
-        highlights: ["شواطئ خاصة", "جولات مدينة", "عروض ليلية"],
-    },
+    id: 2,
+    title: "رحلة ميامي الرائعة ",
+    duration: "15 ليلة",
+    ship: "Norwegian Viva",
+    route: "ميامي، فلوريدا - بونتا ديلجادا، البرتغال - لشبونة، البرتغال - بالما دي مايوركا، إسبانيا - ليفورنو (فلورنسا/بيزا)، إيطاليا - نيس/موناكو (فيلفرانش)، فرنسا - برشلونة، إسبانيا",
+    departure: "ميامي، فلوريدا",
+    arrival: "برشلونة، إسبانيا",
+    image: "https://contents.odysol.com//content/images/cruise/6/15159/ship_520.jpg",
+    highlights: [
+        "ميامي الساحرة",
+        "لشبونة التاريخية",
+        "شواطئ بالما دي مايوركا",
+        "فلورنسا وبرج بيزا",
+        "موناكو ونيس الفرنسية",
+        "برشلونة الحيوية"
+    ],
+}
+,
     {
-        id: 3,
-        title: "مغامرة البحر الأحمر",
-        duration: "5 أيام",
-        ship: "أروى الأسطورة",
-        route: "جدة - العقبة - شرم الشيخ",
-        departure: "جدة",
-        arrival: "جدة",
-        image: "https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg",
-        highlights: ["غوص مع الدلافين", "رحلات صحراوية", "مأكولات محلية"],
-    },
+    id: 3,
+    title: "رحلة سان خوان الكاريبية",
+    duration: "7 ليالٍ",
+    ship: "نرويجيان إبيك",
+    route: "سان خوان، بورتو ريكو",
+    departure: "سان خوان",
+    arrival: "جزر الكاريبي",
+    image: "https://contents.odysol.com//content/Images/Cruise/6/13236/Gallery/Great_Outdoors.jpg",
+    highlights: [
+        "المدينة القديمة في سان خوان",
+        "شواطئ أروبا",
+        "مباني كوراساو الملونة",
+        "قمة بيتونز في سانت لوسيا",
+        "شاطئ سانت كيتس الذهبي"
+    ],
+},
+    {
+    id: 4,
+    title: "رحلة بونتا كانا الكاريبية",
+    duration: "7 ليالٍ",
+    ship: "نرويجيان سكاي",
+    route: "بونتا كانا (لا رومانا)، جمهورية الدومينيكان",
+    departure: "بونتا كانا",
+    arrival: "جزر الكاريبي",
+    image: "https://contents.odysol.com//content/Images/Destination/9/Gallery/Caribbean_islands.jpg",
+    highlights: [
+        "شواطئ بونتا كانا",
+        "جزيرة أروبا",
+        "مباني كوراساو الملونة",
+        "جزيرة بونير (كرالينديك)",
+        "قمة بيتونز في سانت لوسيا",
+        "شاطئ سانت كيتس",
+        "جزيرة تورتولا"
+    ],
+},
+
 ];
 
 // Function to create cruise card HTML

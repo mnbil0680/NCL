@@ -443,6 +443,18 @@
     background-color: rgba(255, 255, 255, 0.3);
 }
 
+
+.contact-item a {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-item a:hover {
+    color: #0090d0;
+    text-decoration: underline;
+}
+
 /* Responsive */
 @media (min-width: 640px) {
     .grid-cols-1 {
