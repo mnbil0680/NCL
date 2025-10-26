@@ -1,1646 +1,804 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Norwegian Cruise Line</title>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        />
+    <title>Norwegian Cruise Line</title>
 
-        <!-- My Style Files -->
-        <link rel="stylesheet" href="./css/faq.css" />
-        <link rel="stylesheet" href="./css/footer.css" />
-        <link rel="stylesheet" href="./css/gallery.css" />
-        <link rel="stylesheet" href="./css/hero.css" />
-        <link rel="stylesheet" href="./css/index.css" />
-        <link rel="stylesheet" href="./css/nav.css" />
-        <link rel="stylesheet" href="./css/search.css" />
-        <link rel="stylesheet" href="./css/ship.css" />
-        <link rel="stylesheet" href="./css/travel.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
-        <link
-            rel="stylesheet"
-            href="./css/searchBox/cruise-search-form-option-6.css"
-        />
-        <link rel="stylesheet" href="./css/searchBox/font-awesome.min.css" />
+    <!-- My Style Files -->
+    <link rel="stylesheet" href="./css/faq.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/gallery.css" />
+    <link rel="stylesheet" href="./css/hero.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="stylesheet" href="./css/search.css" />
+    <link rel="stylesheet" href="./css/ship.css" />
+    <link rel="stylesheet" href="./css/travel.css" />
 
-        <script src="./js/searchBox/OVExplore.min.js"></script>
+    <link rel="stylesheet" href="./css/searchBox/cruise-search-form-option-6.css" />
+    <link rel="stylesheet" href="./css/searchBox/font-awesome.min.css" />
 
-        <script>
-            window.OVExplore6 = {
-                /*'OVExplore' name should be match with your tag's search-form-settings property. i.e. <ody-search-form search-form-settings="OVExplore"></ody-search-form> */
-                preferences: {
-                    languageId: "13", // Set your Language Id. Default Value : 1
-                    siteItemId: "1299887", // Replace your SIID here.
-                    sid1: "", // External ref 1
-                    sid2: "", // External ref 2
-                    referrer: "",
-                    showStateNCountryWithPorts: true,
-                    resultWindowType: "_blank", //specifies result window type of results Options: 1._blank 2._self 3._top
-                    cruiseSearchFields: {
-                        // specifies the fields to be displayed on cruise search form, one can move fields from basic to advance and vice versa as per his/her preference */
-                        basic: [
-                            "ship",
-                            "destination",
-                            "sailingdate",
-                            "duration",
-                            //"cruiseline",
-                            //"cruisetypecheckbox",
-                            //"packagetourscheckbox",
-                            //"allpackagescheckbox",
-                            //"allpackagescheckbox",
-                            //"includeinternalcruiselinescheckbox",
-                            //"newwindowcheckbox",
-                        ],
-                        advance: [
-                            "departureport",
-                            //"ship",
-                            "cruisetypecheckbox",
-                            "packagetourscheckbox",
-                            "allpackagescheckbox",
-                            "allpackagescheckbox",
-                            "includeinternalcruiselinescheckbox",
-                            "newwindowcheckbox",
-                        ],
-                    },
+    <script src="./js/searchBox/OVExplore.min.js"></script>
+
+    <script>
+        window.OVExplore6 = {
+            /*'OVExplore' name should be match with your tag's search-form-settings property. i.e. <ody-search-form search-form-settings="OVExplore"></ody-search-form> */
+            preferences: {
+                languageId: "13", // Set your Language Id. Default Value : 1
+                siteItemId: "1299887", // Replace your SIID here.
+                sid1: "", // External ref 1
+                sid2: "", // External ref 2
+                referrer: "",
+                showStateNCountryWithPorts: true,
+                resultWindowType: "_blank", //specifies result window type of results Options: 1._blank 2._self 3._top
+                cruiseSearchFields: {
+                    // specifies the fields to be displayed on cruise search form, one can move fields from basic to advance and vice versa as per his/her preference */
+                    basic: [
+                        "ship",
+                        "destination",
+                        "sailingdate",
+                        "duration",
+                        //"cruiseline",
+                        //"cruisetypecheckbox",
+                        //"packagetourscheckbox",
+                        //"allpackagescheckbox",
+                        //"allpackagescheckbox",
+                        //"includeinternalcruiselinescheckbox",
+                        //"newwindowcheckbox",
+                    ],
+                    advance: [
+                        "departureport",
+                        //"ship",
+                        "cruisetypecheckbox",
+                        "packagetourscheckbox",
+                        "allpackagescheckbox",
+                        "allpackagescheckbox",
+                        "includeinternalcruiselinescheckbox",
+                        "newwindowcheckbox",
+                    ],
                 },
-                siteSettings: {
-                    productType: "cruise",
-                    domain: "book.mycruiseksa.com", // Replace your domain name here.
-                    // theme: "default",
-                    numberOfCols: 4,
-                    themeColor: "#0071a9|#fff|#0071a9|#fff", // specfies primary | secondary| text color | button text color for search form Default value:#0978bd|#8eccf3|#fff|#fff
-                },
-                cruiseWidgetSettings: {
-                    widgetType:
-                        "single" /* To be used to set select dropdown type versions. Default value: multiple, Options: 1.multiple 2.single*/,
-                },
-            };
-        </script>
-    </head>
+            },
+            siteSettings: {
+                productType: "cruise",
+                domain: "book.mycruiseksa.com", // Replace your domain name here.
+                // theme: "default",
+                numberOfCols: 4,
+                themeColor: "#0071a9|#fff|#0071a9|#fff", // specfies primary | secondary| text color | button text color for search form Default value:#0978bd|#8eccf3|#fff|#fff
+            },
+            cruiseWidgetSettings: {
+                widgetType:
+                    "single" /* To be used to set select dropdown type versions. Default value: multiple, Options: 1.multiple 2.single*/,
+            },
+        };
+    </script>
+</head>
 
-    <body>
-        <!-- Navbar -->
-        <nav class="navbar" id="navbar">
-            <div class="navbar-container">
-                <div class="navbar-content">
-                    <!-- Logo -->
-                    <div class="logo-container">
-                        <img
-                            src="./imgs/NCL2.svg"
-                            alt="Norwegian Cruise Line"
-                            class="navbar-img"
-                        />
-                    </div>
-
-                    <!-- Desktop Navigation -->
-                    <div class="desktop-nav">
-                        <a href="#home" class="nav-link">الرئيسية</a>
-                        <a href="#ship" class="nav-link">السفينة</a>
-                        <a href="#travels" class="nav-link">الرحلات</a>
-                        <a href="#gallery" class="nav-link">المعرض</a>
-                        <a href="#faq" class="nav-link">الأسئلة الشائعة</a>
-                        <a href="#contact" class="nav-link">تواصل معنا</a>
-                        <button class="btn-primary">احجز الآن</button>
-                    </div>
-
-                    <!-- Mobile menu button -->
-                    <button
-                        class="mobile-menu-btn"
-                        id="mobile-menu-btn"
-                        aria-label="فتح القائمة"
-                    >
-                        <svg
-                            class="menu-icon"
-                            id="menu-icon"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16"
-                            />
-                        </svg>
-                        <svg
-                            class="menu-icon"
-                            id="close-icon"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            style="display: none"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12"
-                            />
-                        </svg>
-                    </button>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <div class="navbar-content">
+                <!-- Logo -->
+                <div class="logo-container">
+                    <img src="./imgs/NCL2.svg" alt="Norwegian Cruise Line" class="navbar-img" />
                 </div>
 
-                <!-- Mobile Navigation -->
-                <div class="mobile-nav" id="mobile-nav">
-                    <div class="mobile-nav-content">
-                        <a href="#home" class="mobile-nav-link">الرئيسية</a>
-                        <a href="#ship" class="mobile-nav-link">السفينة</a>
-                        <a href="#travels" class="mobile-nav-link">الرحلات</a>
-                        <a href="#gallery" class="mobile-nav-link">المعرض</a>
-                        <a href="#faq" class="mobile-nav-link"
-                            >الأسئلة الشائعة</a
-                        >
-                        <a href="#contact" class="mobile-nav-link"
-                            >تواصل معنا</a
-                        >
-                        <div class="mobile-btn-container">
-                            <button class="btn-primary full-width">
-                                احجز الآن
-                            </button>
+                <!-- Desktop Navigation -->
+                <div class="desktop-nav">
+                    <a href="#home" class="nav-link">الرئيسية</a>
+                    <a href="#ship" class="nav-link">السفينة</a>
+                    <a href="#travels" class="nav-link">الرحلات</a>
+                    <a href="#faq" class="nav-link">الأسئلة الشائعة</a>
+                    <a href="#contact" class="nav-link">تواصل معنا</a>
+                    <button class="navv-btn">احجز الآن</button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="فتح القائمة">
+                    <svg class="menu-icon" id="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg class="menu-icon" id="close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        style="display: none">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-nav" id="mobile-nav">
+                <div class="mobile-nav-content">
+                    <a href="#home" class="mobile-nav-link">الرئيسية</a>
+                    <a href="#ship" class="mobile-nav-link">السفينة</a>
+                    <a href="#travels" class="mobile-nav-link">الرحلات</a>
+                    <a href="#faq" class="mobile-nav-link">الأسئلة الشائعة</a>
+                    <a href="#contact" class="mobile-nav-link">تواصل معنا</a>
+                    <div class="mobile-btn-container">
+                        <button class="btn-primary full-width">
+                            احجز الآن
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <section id="home" class="hero-section">
+            <!-- Background Image -->
+            <div class="hero-bg">
+                <img src="./imgs/norwegian_cruise_line.jpeg" alt=" كروز النرويجيان الفاخر في البحر" loading="eager" />
+                <div class="gradient-overlay"></div>
+            </div>
+
+            <!-- Content -->
+            <div class="hero-content">
+                <div class="animate-fade-in">
+                    <h1 class="main-title">
+                        اكتشف جمال البحر مع
+                        <br />
+                        <span class="gradient-text">
+                            Norwegian Cruise Line
+                        </span>
+                    </h1>
+
+                    <p class="subtitle">
+                        استمتع برحلة بحرية لا تُنسى في أجمل مياه العالم
+                        <br />
+                        مع خدمة 5 نجوم ومرافق عالمية المستوى
+                    </p>
+
+                    <div class="button-container">
+                        <button class="btn-primary" id="exploreBtn">
+                            استكشف الرحلات
+                            <svg class="arrow-icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 12H5" />
+                                <path d="M12 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator">
+                <span class="scroll-text">اكتشف المزيد</span>
+                <div class="scroll-mouse">
+                    <div class="scroll-dot"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ship -->
+        <section id="ship" class="section-padding bg-light">
+            <div class="container">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-primary mb-6">
+                        كروز
+                        <span class="text-gradient">نرويجيان لاين</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        استمتع بتجربة استثنائية على متن أحدث كروزات
+                        Norwegian Cruise Line، المجهزة بأحدث التقنيات
+                        والمرافق العالمية لضمان رحلة لا تُنسى
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 grid-cols-lg-2 gap-12 gap-lg-16 items-center">
+                    <!-- Features -->
+                    <div class="order-1 order-lg-1 space-y-8">
+                        <div>
+                            <h3 class="text-3xl font-bold text-primary mb-6">
+                                مرافق وخدمات عالمية المستوى
+                            </h3>
+                            <p class="text-lg text-gray-600 mb-8">
+                                استمتع بتجربة استثنائية على متن سفينتنا
+                                المجهزة بأحدث التقنيات وأفضل الخدمات لضمان
+                                راحتكم وسعادتكم طوال الرحلة.
+                            </p>
+                        </div>
+
+                        <div class="space-y-4" id="features-container">
+                            <!-- Features will be populated by JavaScript -->
+                        </div>
+
+                        <div class="pt-6">
+                            <a href="https://book.mycruiseksa.com/swift/cruise?siid=1299887&SearchCruise=true&CruiseLine=6&Ship=15159&transportId=29
+                                ">
+                                <button class="btn-primary">
+                                    احجز الكروز الان
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Ship Image -->
+                    <div class="order-2 order-lg-2 animate-slide-up">
+                        <div class="relative">
+                            <img src="./imgs/NCL_VIVA.jpg" alt="نرويجيان كروز" class="ship-image" loading="lazy" />
+                            <div class="absolute inset-0 rounded-2xl"></div>
+
+                            <!-- Ship Stats Overlay -->
+                            <div class="ship-stats">
+                                <div class="grid grid-cols-2 gap-4 text-center">
+                                    <div class="stat-item">
+                                        <div class="stat-icon" style="color: #1e40af">
+                                            <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                                                <path
+                                                    d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z" />
+                                            </svg>
+                                        </div>
+                                        <div class="stat-content">
+                                            <div class="stat-number" style="color: #1e40af">
+                                                4,028
+                                            </div>
+                                            <div class="stat-label" style="color: #64748b">
+                                                ضيف
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-icon" style="color: #1e40af">
+                                            <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                                                <path
+                                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                                            </svg>
+                                        </div>
+                                        <div class="stat-content">
+                                            <div class="stat-number" style="color: #1e40af">
+                                                20
+                                            </div>
+                                            <div class="stat-label" style="color: #64748b">
+                                                طابق
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-icon" style="color: #1e40af">
+                                            <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                                                <path
+                                                    d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1zM10 6a2 2 0 0 1 4 0v1h-4V6zm6 14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2v11z" />
+                                            </svg>
+                                        </div>
+                                        <div class="stat-content">
+                                            <div class="stat-number" style="color: #1e40af">
+                                                2,014
+                                            </div>
+                                            <div class="stat-label" style="color: #64748b">
+                                                كابينة
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-icon" style="color: #f59e0b">
+                                            <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                                                <path
+                                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                            </svg>
+                                        </div>
+                                        <div class="stat-content">
+                                            <div class="stat-number" style="color: #f59e0b">
+                                                ★★★★★
+                                            </div>
+                                            <div class="stat-label" style="color: #64748b">
+                                                كروز فيفا نرويجيان
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </nav>
+        </section>
 
-        <main>
-            <!-- Hero -->
-            <section id="home" class="hero-section">
-                <!-- Background Image -->
-                <div class="hero-bg">
-                    <img
-                        src="./imgs/norwegian_cruise_line.jpeg"
-                        alt=" كروز النرويجيان الفاخر في البحر"
-                        loading="eager"
-                    />
-                    <div class="gradient-overlay"></div>
+        <!-- Travels -->
+        <section id="travels" class="section-padding bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-primary mb-6">
+                        <span class="text-gradient">رحلات نرويجيان كروز</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        اختر من بين مجموعة متنوعة من الرحلات البحرية المصممة
+                        خصيصاً لتناسب جميع الأذواق والميزانيات
+                    </p>
                 </div>
 
-                <!-- Content -->
-                <div class="hero-content">
-                    <div class="animate-fade-in">
-                        <h1 class="main-title">
-                            اكتشف جمال البحر مع
-                            <br />
-                            <span class="gradient-text">
-                                Norwegian Cruise Line
-                            </span>
-                        </h1>
-
-                        <p class="subtitle">
-                            استمتع برحلة بحرية لا تُنسى في أجمل مياه العالم
-                            <br />
-                            مع خدمة 5 نجوم ومرافق عالمية المستوى
-                        </p>
-
-                        <div class="button-container">
-                            <button class="btn-primary" id="exploreBtn">
-                                استكشف الرحلات
-                                <svg
-                                    class="arrow-icon"
-                                    fill="currentColor"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path d="M19 12H5" />
-                                    <path d="M12 19l-7-7 7-7" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
+                <div class="grid grid-cols-1 grid-cols-md-2 grid-cols-lg-3 gap-8" id="cruises-container">
+                    <!-- Cruise cards will be inserted here by JavaScript -->
                 </div>
 
-                <!-- Scroll indicator -->
-                <div class="scroll-indicator">
-                    <span class="scroll-text">اكتشف المزيد</span>
-                    <div class="scroll-mouse">
-                        <div class="scroll-dot"></div>
+                <div class="text-center mt-12">
+                    <a
+                        href="https://book.mycruiseksa.com/swift/cruise?siid=1299887&lang=13&destinationtype=Ocean&sortColumn=cruiselinePriority&sortOrder=asc">
+                        <button class="btn-secondary text-lg">
+                            عرض جميع الرحلات
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search -->
+        <section class="search-section section-padding">
+            <div class="search-container">
+                <!-- Header -->
+                <div class="search-header">
+                    <h2 class="search-title">ابحث عن رحلتك المثالية</h2>
+                    <p class="search-description">
+                        استخدم محرك البحث للعثور على الرحلة البحرية التي
+                        تناسب تفضيلاتك وميزانيتك
+                    </p>
+                </div>
+
+                <!-- Search Form -->
+                <div class="tab-content border border-top-0 mb-3 custom-tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade pt-2 active show" id="option-six" role="tabpanel"
+                        aria-labelledby="option-six-tab">
+                        <!-- Step 3: Add ody-search-form tag at the palce where you would like to populate searchform. -->
+                        <ody-search-form search-form-settings="OVExplore6">
+                        </ody-search-form>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Ship -->
-            <section id="ship" class="section-padding bg-light">
-                <div class="container">
-                    <div class="text-center mb-16">
-                        <h2 class="text-4xl font-bold text-primary mb-6">
-                            كروز
-                            <span class="text-gradient">نرويجيان لاين</span>
-                        </h2>
-                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                            استمتع بتجربة استثنائية على متن أحدث كروزات
-                            Norwegian Cruise Line، المجهزة بأحدث التقنيات
-                            والمرافق العالمية لضمان رحلة لا تُنسى
-                        </p>
-                    </div>
 
+
+        <!-- FAQ -->
+        <section id="faq" class="section-padding bg-white">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
                     <div
-                        class="grid grid-cols-1 grid-cols-lg-2 gap-12 gap-lg-16 items-center"
-                    >
-                        <!-- Features -->
-                        <div class="order-1 order-lg-1 space-y-8">
-                            <div>
-                                <h3
-                                    class="text-3xl font-bold text-primary mb-6"
-                                >
-                                    مرافق وخدمات عالمية المستوى
+                        class="inline-flex items-center space-x-reverse space-x-3 bg-light-blue rounded-full px-6 py-3 mb-6">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="m9,9h0a3,3 0 0,1 6,0c0,2 -3,3 -3,3"></path>
+                            <path d="m12,17h.01"></path>
+                        </svg>
+                        <span class="text-primary font-semibold">الأسئلة الشائعة</span>
+                    </div>
+                    <h2 class="text-4xl font-bold text-primary mb-6">
+                        أجوبة على <span class="text-gradient">أسئلتكم</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        نجيب على أكثر الأسئلة شيوعاً حول رحلاتنا البحرية
+                        لمساعدتكم في التخطيط لرحلة مثالية
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item">
+                        <button class="faq-button" onclick="toggleAccordion(0)" aria-expanded="false"
+                            aria-controls="faq-answer-0">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold text-primary pr-4">
+                                    ما هي المستندات المطلوبة للسفر؟
                                 </h3>
-                                <p class="text-lg text-gray-600 mb-8">
-                                    استمتع بتجربة استثنائية على متن سفينتنا
-                                    المجهزة بأحدث التقنيات وأفضل الخدمات لضمان
-                                    راحتكم وسعادتكم طوال الرحلة.
-                                </p>
-                            </div>
-
-                            <div class="space-y-4" id="features-container">
-                                <!-- Features will be populated by JavaScript -->
-                            </div>
-
-                            <div class="pt-6">
-                                <a
-                                    href="https://book.mycruiseksa.com/swift/cruise?siid=1299887&SearchCruise=true&CruiseLine=6&Ship=15159&transportId=29
-                                "
-                                >
-                                    <button class="btn-primary">
-                                        احجز الكروز الان
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Ship Image -->
-                        <div class="order-2 order-lg-2 animate-slide-up">
-                            <div class="relative">
-                                <img
-                                    src="./imgs/NCL_VIVA.jpg"
-                                    alt="نرويجيان كروز"
-                                    class="ship-image"
-                                    loading="lazy"
-                                />
-                                <div class="absolute inset-0 rounded-2xl"></div>
-
-                                <!-- Ship Stats Overlay -->
-                                <div class="ship-stats">
-                                    <div
-                                        class="grid grid-cols-2 gap-4 text-center"
-                                    >
-                                        <div class="stat-item">
-                                            <div
-                                                class="stat-icon"
-                                                style="color: #1e40af"
-                                            >
-                                                <svg
-                                                    fill="currentColor"
-                                                    viewBox="0 0 24 24"
-                                                    width="24"
-                                                    height="24"
-                                                >
-                                                    <path
-                                                        d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"
-                                                    />
-                                                </svg>
-                                            </div>
-                                            <div class="stat-content">
-                                                <div
-                                                    class="stat-number"
-                                                    style="color: #1e40af"
-                                                >
-                                                    4,028
-                                                </div>
-                                                <div
-                                                    class="stat-label"
-                                                    style="color: #64748b"
-                                                >
-                                                    ضيف
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="stat-item">
-                                            <div
-                                                class="stat-icon"
-                                                style="color: #1e40af"
-                                            >
-                                                <svg
-                                                    fill="currentColor"
-                                                    viewBox="0 0 24 24"
-                                                    width="24"
-                                                    height="24"
-                                                >
-                                                    <path
-                                                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
-                                                    />
-                                                </svg>
-                                            </div>
-                                            <div class="stat-content">
-                                                <div
-                                                    class="stat-number"
-                                                    style="color: #1e40af"
-                                                >
-                                                    20
-                                                </div>
-                                                <div
-                                                    class="stat-label"
-                                                    style="color: #64748b"
-                                                >
-                                                    طابق
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="stat-item">
-                                            <div
-                                                class="stat-icon"
-                                                style="color: #1e40af"
-                                            >
-                                                <svg
-                                                    fill="currentColor"
-                                                    viewBox="0 0 24 24"
-                                                    width="24"
-                                                    height="24"
-                                                >
-                                                    <path
-                                                        d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1zM10 6a2 2 0 0 1 4 0v1h-4V6zm6 14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2v11z"
-                                                    />
-                                                </svg>
-                                            </div>
-                                            <div class="stat-content">
-                                                <div
-                                                    class="stat-number"
-                                                    style="color: #1e40af"
-                                                >
-                                                    2,014
-                                                </div>
-                                                <div
-                                                    class="stat-label"
-                                                    style="color: #64748b"
-                                                >
-                                                    كابينة
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="stat-item">
-                                            <div
-                                                class="stat-icon"
-                                                style="color: #f59e0b"
-                                            >
-                                                <svg
-                                                    fill="currentColor"
-                                                    viewBox="0 0 24 24"
-                                                    width="24"
-                                                    height="24"
-                                                >
-                                                    <path
-                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                                                    />
-                                                </svg>
-                                            </div>
-                                            <div class="stat-content">
-                                                <div
-                                                    class="stat-number"
-                                                    style="color: #f59e0b"
-                                                >
-                                                    ★★★★★
-                                                </div>
-                                                <div
-                                                    class="stat-label"
-                                                    style="color: #64748b"
-                                                >
-                                                    كروز فيفا نرويجيان
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Travels -->
-            <section id="travels" class="section-padding bg-white">
-                <div class="max-w-7xl mx-auto">
-                    <div class="text-center mb-16">
-                        <h2 class="text-4xl font-bold text-primary mb-6">
-                            <span class="text-gradient"
-                                >رحلات نرويجيان كروز</span
-                            >
-                        </h2>
-                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                            اختر من بين مجموعة متنوعة من الرحلات البحرية المصممة
-                            خصيصاً لتناسب جميع الأذواق والميزانيات
-                        </p>
-                    </div>
-
-                    <div class="grid grid-cols-1 grid-cols-md-2 grid-cols-lg-3 gap-8" id="cruises-container">
-                        <!-- Cruise cards will be inserted here by JavaScript -->
-                    </div>
-
-                    <div class="text-center mt-12">
-                        <a
-                            href="https://book.mycruiseksa.com/swift/cruise?siid=1299887&lang=13&destinationtype=Ocean&sortColumn=cruiselinePriority&sortOrder=asc"
-                        >
-                            <button class="btn-secondary text-lg">
-                                عرض جميع الرحلات
-                            </button>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Search -->
-            <section class="search-section section-padding">
-                <div class="search-container">
-                    <!-- Header -->
-                    <div class="search-header">
-                        <h2 class="search-title">ابحث عن رحلتك المثالية</h2>
-                        <p class="search-description">
-                            استخدم محرك البحث للعثور على الرحلة البحرية التي
-                            تناسب تفضيلاتك وميزانيتك
-                        </p>
-                    </div>
-
-                    <!-- Search Form -->
-                    <div
-                        class="tab-content border border-top-0 mb-3 custom-tab-content"
-                        id="nav-tabContent"
-                    >
-                        <div
-                            class="tab-pane fade pt-2 active show"
-                            id="option-six"
-                            role="tabpanel"
-                            aria-labelledby="option-six-tab"
-                        >
-                            <!-- Step 3: Add ody-search-form tag at the palce where you would like to populate searchform. -->
-                            <ody-search-form search-form-settings="OVExplore6">
-                            </ody-search-form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Gallery -->
-            <section id="gallery" class="section-padding bg-ecf3fa">
-                <div class="max-w-7xl mx-auto">
-                    <div class="text-center mb-16">
-                        <h2 class="text-4xl font-bold text-194f94 mb-6">
-                            <span class="text-gradient">معرض الصور</span>
-                        </h2>
-                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                            استكشف جمال سفينتنا الفاخرة ومرافقها المتميزة من
-                            خلال مجموعة رائعة من الصور والفيديوهات
-                        </p>
-                    </div>
-
-                    <!-- Category Filter -->
-                    <div class="flex flex-wrap justify-center gap-4 mb-12">
-                        <button
-                            class="category-btn active px-6 py-3 rounded-full font-medium bg-white text-194f94 border border-gray-200"
-                            data-category="الكل"
-                        >
-                            الكل
-                        </button>
-                        <button
-                            class="category-btn px-6 py-3 rounded-full font-medium bg-white text-194f94 border border-gray-200"
-                            data-category="السفينة"
-                        >
-                            السفينة
-                        </button>
-                        <button
-                            class="category-btn px-6 py-3 rounded-full font-medium bg-white text-194f94 border border-gray-200"
-                            data-category="المطاعم"
-                        >
-                            المطاعم
-                        </button>
-                        <button
-                            class="category-btn px-6 py-3 rounded-full font-medium bg-white text-194f94 border border-gray-200"
-                            data-category="المرافق"
-                        >
-                            المرافق
-                        </button>
-                        <button
-                            class="category-btn px-6 py-3 rounded-full font-medium bg-white text-194f94 border border-gray-200"
-                            data-category="الكابائن"
-                        >
-                            الكابائن
-                        </button>
-                        <button
-                            class="category-btn px-6 py-3 rounded-full font-medium bg-white text-194f94 border border-gray-200"
-                            data-category="الردهة"
-                        >
-                            الردهة
-                        </button>
-                        <button
-                            class="category-btn px-6 py-3 rounded-full font-medium bg-white text-194f94 border border-gray-200"
-                            data-category="الترفيه"
-                        >
-                            الترفيه
-                        </button>
-                        <button
-                            class="category-btn px-6 py-3 rounded-full font-medium bg-white text-194f94 border border-gray-200"
-                            data-category="السبا"
-                        >
-                            السبا
-                        </button>
-                        <button
-                            class="category-btn px-6 py-3 rounded-full font-medium bg-white text-194f94 border border-gray-200"
-                            data-category="المناظر"
-                        >
-                            المناظر
-                        </button>
-                        <button
-                            class="category-btn px-6 py-3 rounded-full font-medium bg-white text-194f94 border border-gray-200"
-                            data-category="فيديو"
-                        >
-                            فيديو
-                        </button>
-                    </div>
-
-                    <!-- Gallery Grid -->
-                    <div class="grid grid-cols-1 grid-cols-md-2 grid-cols-lg-3 gap-6" id="gallery-grid">
-                        <!-- Item 1 -->
-                        <div
-                            class="gallery-item relative group cursor-pointer overflow-hidden rounded-xl shadow-lg"
-                            data-category="السفينة"
-                            data-index="0"
-                        >
-                            <div class="aspect-square relative overflow-hidden">
-                                <img
-                                    src="https://images.pexels.com/photos/1450360/pexels-photo-1450360.jpeg"
-                                    alt="سفينة كروز فاخرة في البحر"
-                                    class="gallery-image w-full h-full object-cover transition-all duration-500"
-                                    loading="lazy"
-                                />
-
-                                <!-- Overlay -->
-                                <div
-                                    class="gallery-overlay absolute inset-0 bg-black-40 opacity-0 flex items-center justify-center"
-                                >
-                                    <div class="text-center text-white">
-                                        <div class="text-sm font-medium mb-1">
-                                            السفينة
-                                        </div>
-                                        <div class="text-xs opacity-90">
-                                            انقر للعرض
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Category Badge -->
-                            <div
-                                class="absolute top-3 right-3 bg-white-90 backdrop-blur-sm rounded-full px-3 py-1"
-                            >
-                                <span class="text-xs font-medium text-194f94"
-                                    >السفينة</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- Item 2 -->
-                        <div
-                            class="gallery-item relative group cursor-pointer overflow-hidden rounded-xl shadow-lg"
-                            data-category="المطاعم"
-                            data-index="1"
-                        >
-                            <div class="aspect-square relative overflow-hidden">
-                                <img
-                                    src="https://images.pexels.com/photos/2467287/pexels-photo-2467287.jpeg"
-                                    alt="مطعم فاخر على متن السفينة"
-                                    class="gallery-image w-full h-full object-cover transition-all duration-500"
-                                    loading="lazy"
-                                />
-
-                                <!-- Overlay -->
-                                <div
-                                    class="gallery-overlay absolute inset-0 bg-black-40 opacity-0 flex items-center justify-center"
-                                >
-                                    <div class="text-center text-white">
-                                        <div class="text-sm font-medium mb-1">
-                                            المطاعم
-                                        </div>
-                                        <div class="text-xs opacity-90">
-                                            انقر للعرض
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Category Badge -->
-                            <div
-                                class="absolute top-3 right-3 bg-white-90 backdrop-blur-sm rounded-full px-3 py-1"
-                            >
-                                <span class="text-xs font-medium text-194f94"
-                                    >المطاعم</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- Item 3 -->
-                        <div
-                            class="gallery-item relative group cursor-pointer overflow-hidden rounded-xl shadow-lg"
-                            data-category="المرافق"
-                            data-index="2"
-                        >
-                            <div class="aspect-square relative overflow-hidden">
-                                <img
-                                    src="https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg"
-                                    alt="حمام سباحة مع إطلالة بحرية"
-                                    class="gallery-image w-full h-full object-cover transition-all duration-500"
-                                    loading="lazy"
-                                />
-
-                                <!-- Overlay -->
-                                <div
-                                    class="gallery-overlay absolute inset-0 bg-black-40 opacity-0 flex items-center justify-center"
-                                >
-                                    <div class="text-center text-white">
-                                        <div class="text-sm font-medium mb-1">
-                                            المرافق
-                                        </div>
-                                        <div class="text-xs opacity-90">
-                                            انقر للعرض
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Category Badge -->
-                            <div
-                                class="absolute top-3 right-3 bg-white-90 backdrop-blur-sm rounded-full px-3 py-1"
-                            >
-                                <span class="text-xs font-medium text-194f94"
-                                    >المرافق</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- Item 4 -->
-                        <div
-                            class="gallery-item relative group cursor-pointer overflow-hidden rounded-xl shadow-lg"
-                            data-category="الكابائن"
-                            data-index="3"
-                        >
-                            <div class="aspect-square relative overflow-hidden">
-                                <img
-                                    src="https://images.pexels.com/photos/2413613/pexels-photo-2413613.jpeg"
-                                    alt="كابينة فاخرة مع شرفة"
-                                    class="gallery-image w-full h-full object-cover transition-all duration-500"
-                                    loading="lazy"
-                                />
-
-                                <!-- Overlay -->
-                                <div
-                                    class="gallery-overlay absolute inset-0 bg-black-40 opacity-0 flex items-center justify-center"
-                                >
-                                    <div class="text-center text-white">
-                                        <div class="text-sm font-medium mb-1">
-                                            الكابائن
-                                        </div>
-                                        <div class="text-xs opacity-90">
-                                            انقر للعرض
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Category Badge -->
-                            <div
-                                class="absolute top-3 right-3 bg-white-90 backdrop-blur-sm rounded-full px-3 py-1"
-                            >
-                                <span class="text-xs font-medium text-194f94"
-                                    >الكابائن</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- Item 5 -->
-                        <div
-                            class="gallery-item relative group cursor-pointer overflow-hidden rounded-xl shadow-lg"
-                            data-category="الردهة"
-                            data-index="4"
-                        >
-                            <div class="aspect-square relative overflow-hidden">
-                                <img
-                                    src="https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg"
-                                    alt="منطقة الاستقبال الفاخرة"
-                                    class="gallery-image w-full h-full object-cover transition-all duration-500"
-                                    loading="lazy"
-                                />
-
-                                <!-- Overlay -->
-                                <div
-                                    class="gallery-overlay absolute inset-0 bg-black-40 opacity-0 flex items-center justify-center"
-                                >
-                                    <div class="text-center text-white">
-                                        <div class="text-sm font-medium mb-1">
-                                            الردهة
-                                        </div>
-                                        <div class="text-xs opacity-90">
-                                            انقر للعرض
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Category Badge -->
-                            <div
-                                class="absolute top-3 right-3 bg-white-90 backdrop-blur-sm rounded-full px-3 py-1"
-                            >
-                                <span class="text-xs font-medium text-194f94"
-                                    >الردهة</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- Item 6 -->
-                        <div
-                            class="gallery-item relative group cursor-pointer overflow-hidden rounded-xl shadow-lg"
-                            data-category="الترفيه"
-                            data-index="5"
-                        >
-                            <div class="aspect-square relative overflow-hidden">
-                                <img
-                                    src="https://images.pexels.com/photos/3278364/pexels-photo-3278364.jpeg"
-                                    alt="منطقة ألعاب الأطفال"
-                                    class="gallery-image w-full h-full object-cover transition-all duration-500"
-                                    loading="lazy"
-                                />
-
-                                <!-- Overlay -->
-                                <div
-                                    class="gallery-overlay absolute inset-0 bg-black-40 opacity-0 flex items-center justify-center"
-                                >
-                                    <div class="text-center text-white">
-                                        <div class="text-sm font-medium mb-1">
-                                            الترفيه
-                                        </div>
-                                        <div class="text-xs opacity-90">
-                                            انقر للعرض
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Category Badge -->
-                            <div
-                                class="absolute top-3 right-3 bg-white-90 backdrop-blur-sm rounded-full px-3 py-1"
-                            >
-                                <span class="text-xs font-medium text-194f94"
-                                    >الترفيه</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- Item 7 -->
-                        <div
-                            class="gallery-item relative group cursor-pointer overflow-hidden rounded-xl shadow-lg"
-                            data-category="السبا"
-                            data-index="6"
-                        >
-                            <div class="aspect-square relative overflow-hidden">
-                                <img
-                                    src="https://images.pexels.com/photos/1659438/pexels-photo-1659438.jpeg"
-                                    alt="منطقة الاسترخاء والسبا"
-                                    class="gallery-image w-full h-full object-cover transition-all duration-500"
-                                    loading="lazy"
-                                />
-
-                                <!-- Overlay -->
-                                <div
-                                    class="gallery-overlay absolute inset-0 bg-black-40 opacity-0 flex items-center justify-center"
-                                >
-                                    <div class="text-center text-white">
-                                        <div class="text-sm font-medium mb-1">
-                                            السبا
-                                        </div>
-                                        <div class="text-xs opacity-90">
-                                            انقر للعرض
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Category Badge -->
-                            <div
-                                class="absolute top-3 right-3 bg-white-90 backdrop-blur-sm rounded-full px-3 py-1"
-                            >
-                                <span class="text-xs font-medium text-194f94"
-                                    >السبا</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- Item 8 -->
-                        <div
-                            class="gallery-item relative group cursor-pointer overflow-hidden rounded-xl shadow-lg"
-                            data-category="المناظر"
-                            data-index="7"
-                        >
-                            <div class="aspect-square relative overflow-hidden">
-                                <img
-                                    src="https://images.pexels.com/photos/4553618/pexels-photo-4553618.jpeg"
-                                    alt="غروب الشمس من السفينة"
-                                    class="gallery-image w-full h-full object-cover transition-all duration-500"
-                                    loading="lazy"
-                                />
-
-                                <!-- Overlay -->
-                                <div
-                                    class="gallery-overlay absolute inset-0 bg-black-40 opacity-0 flex items-center justify-center"
-                                >
-                                    <div class="text-center text-white">
-                                        <div class="text-sm font-medium mb-1">
-                                            المناظر
-                                        </div>
-                                        <div class="text-xs opacity-90">
-                                            انقر للعرض
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Category Badge -->
-                            <div
-                                class="absolute top-3 right-3 bg-white-90 backdrop-blur-sm rounded-full px-3 py-1"
-                            >
-                                <span class="text-xs font-medium text-194f94"
-                                    >المناظر</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- Item 9 (Video) -->
-                        <div
-                            class="gallery-item relative group cursor-pointer overflow-hidden rounded-xl shadow-lg"
-                            data-category="فيديو"
-                            data-index="8"
-                        >
-                            <div class="aspect-square relative overflow-hidden">
-                                <img
-                                    src="https://images.pexels.com/photos/2467287/pexels-photo-2467287.jpeg"
-                                    alt="جولة افتراضية في السفينة"
-                                    class="gallery-image w-full h-full object-cover transition-all duration-500"
-                                    loading="lazy"
-                                />
-
-                                <!-- Overlay -->
-                                <div
-                                    class="gallery-overlay absolute inset-0 bg-black-40 opacity-0 flex items-center justify-center"
-                                >
-                                    <svg
-                                        class="h-12 w-12 text-white icon"
-                                        fill="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path d="M8 5v14l11-7z" />
+                                <div class="flex-shrink-0 mr-4">
+                                    <svg class="chevron chevron-inactive" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <polyline points="6,9 12,15 18,9"></polyline>
                                     </svg>
                                 </div>
                             </div>
-
-                            <!-- Category Badge -->
-                            <div
-                                class="absolute top-3 right-3 bg-white-90 backdrop-blur-sm rounded-full px-3 py-1"
-                            >
-                                <span class="text-xs font-medium text-194f94"
-                                    >فيديو</span
-                                >
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Call to Action -->
-                    <div class="text-center mt-16">
-                        <p class="text-lg text-gray-600 mb-6">
-                            هل أعجبتك صورنا؟ احجز رحلتك الآن واستمتع بهذه
-                            التجربة الرائعة بنفسك
-                        </p>
-                        <button class="btn-primary">احجز رحلتك الآن</button>
-                    </div>
-                </div>
-            </section>
-
-            <!-- FAQ -->
-            <section id="faq" class="section-padding bg-white">
-                <div class="max-w-4xl mx-auto">
-                    <div class="text-center mb-16">
-                        <div
-                            class="inline-flex items-center space-x-reverse space-x-3 bg-light-blue rounded-full px-6 py-3 mb-6"
-                        >
-                            <svg
-                                class="icon"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <path
-                                    d="m9,9h0a3,3 0 0,1 6,0c0,2 -3,3 -3,3"
-                                ></path>
-                                <path d="m12,17h.01"></path>
-                            </svg>
-                            <span class="text-primary font-semibold"
-                                >الأسئلة الشائعة</span
-                            >
-                        </div>
-                        <h2 class="text-4xl font-bold text-primary mb-6">
-                            أجوبة على <span class="text-gradient">أسئلتكم</span>
-                        </h2>
-                        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                            نجيب على أكثر الأسئلة شيوعاً حول رحلاتنا البحرية
-                            لمساعدتكم في التخطيط لرحلة مثالية
-                        </p>
-                    </div>
-
-                    <div class="space-y-4">
-                        <!-- FAQ Item 1 -->
-                        <div class="faq-item">
-                            <button
-                                class="faq-button"
-                                onclick="toggleAccordion(0)"
-                                aria-expanded="false"
-                                aria-controls="faq-answer-0"
-                            >
-                                <div class="flex items-center justify-between">
-                                    <h3
-                                        class="text-lg font-semibold text-primary pr-4"
-                                    >
-                                        ما هي المستندات المطلوبة للسفر؟
-                                    </h3>
-                                    <div class="flex-shrink-0 mr-4">
-                                        <svg
-                                            class="chevron chevron-inactive"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <polyline
-                                                points="6,9 12,15 18,9"
-                                            ></polyline>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </button>
-                            <div id="faq-answer-0" class="faq-answer">
-                                <div class="px-6 pb-6">
-                                    <div class="border-r-4 pr-4">
-                                        <p
-                                            class="text-gray-600 leading-relaxed"
-                                        >
-                                            يحتاج المسافرون إلى جواز سفر صالح
-                                            لمدة لا تقل عن 6 أشهر من تاريخ
-                                            السفر، بالإضافة إلى أي تأشيرات
-                                            مطلوبة حسب الوجهة. نحن نساعد في
-                                            توضيح متطلبات كل وجهة عند الحجز.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ Item 2 -->
-                        <div class="faq-item">
-                            <button
-                                class="faq-button"
-                                onclick="toggleAccordion(1)"
-                                aria-expanded="false"
-                                aria-controls="faq-answer-1"
-                            >
-                                <div class="flex items-center justify-between">
-                                    <h3
-                                        class="text-lg font-semibold text-primary pr-4"
-                                    >
-                                        هل يمكنني إلغاء الحجز أو تعديله؟
-                                    </h3>
-                                    <div class="flex-shrink-0 mr-4">
-                                        <svg
-                                            class="chevron chevron-inactive"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <polyline
-                                                points="6,9 12,15 18,9"
-                                            ></polyline>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </button>
-                            <div id="faq-answer-1" class="faq-answer">
-                                <div class="px-6 pb-6">
-                                    <div class="border-r-4 pr-4">
-                                        <p
-                                            class="text-gray-600 leading-relaxed"
-                                        >
-                                            نعم، يمكن إلغاء أو تعديل الحجز حسب
-                                            شروط التذكرة المحددة. الإلغاء قبل 30
-                                            يوماً من موعد السفر يخضع لرسوم إلغاء
-                                            25%، وقبل 14 يوماً 50%، وأقل من ذلك
-                                            لا يحق استرداد المبلغ.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ Item 3 -->
-                        <div class="faq-item">
-                            <button
-                                class="faq-button"
-                                onclick="toggleAccordion(2)"
-                                aria-expanded="false"
-                                aria-controls="faq-answer-2"
-                            >
-                                <div class="flex items-center justify-between">
-                                    <h3
-                                        class="text-lg font-semibold text-primary pr-4"
-                                    >
-                                        ما هي المرافق المتوفرة على متن السفينة؟
-                                    </h3>
-                                    <div class="flex-shrink-0 mr-4">
-                                        <svg
-                                            class="chevron chevron-inactive"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <polyline
-                                                points="6,9 12,15 18,9"
-                                            ></polyline>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </button>
-                            <div id="faq-answer-2" class="faq-answer">
-                                <div class="px-6 pb-6">
-                                    <div class="border-r-4 pr-4">
-                                        <p
-                                            class="text-gray-600 leading-relaxed"
-                                        >
-                                            تشمل السفينة مطاعم متنوعة، حمامات
-                                            سباحة، سبا، صالة ألعاب رياضية، مسرح،
-                                            كازينو، متاجر، نادي أطفال، وأنشطة
-                                            ترفيهية متنوعة. جميع المرافق مصممة
-                                            لتوفير تجربة مريحة وممتعة.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ Item 4 -->
-                        <div class="faq-item">
-                            <button
-                                class="faq-button"
-                                onclick="toggleAccordion(3)"
-                                aria-expanded="false"
-                                aria-controls="faq-answer-3"
-                            >
-                                <div class="flex items-center justify-between">
-                                    <h3
-                                        class="text-lg font-semibold text-primary pr-4"
-                                    >
-                                        هل الوجبات مشمولة في السعر؟
-                                    </h3>
-                                    <div class="flex-shrink-0 mr-4">
-                                        <svg
-                                            class="chevron chevron-inactive"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <polyline
-                                                points="6,9 12,15 18,9"
-                                            ></polyline>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </button>
-                            <div id="faq-answer-3" class="faq-answer">
-                                <div class="px-6 pb-6">
-                                    <div class="border-r-4 pr-4">
-                                        <p
-                                            class="text-gray-600 leading-relaxed"
-                                        >
-                                            نعم، جميع الوجبات الرئيسية مشمولة في
-                                            سعر التذكرة في المطاعم الرئيسية.
-                                            المطاعم المتخصصة والمشروبات الكحولية
-                                            تخضع لرسوم إضافية. نقدم خيارات
-                                            متنوعة تناسب جميع الأذواق والمتطلبات
-                                            الغذائية.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ Item 5 -->
-                        <div class="faq-item">
-                            <button
-                                class="faq-button"
-                                onclick="toggleAccordion(4)"
-                                aria-expanded="false"
-                                aria-controls="faq-answer-4"
-                            >
-                                <div class="flex items-center justify-between">
-                                    <h3
-                                        class="text-lg font-semibold text-primary pr-4"
-                                    >
-                                        كيف يتم ترتيب الكابائن؟
-                                    </h3>
-                                    <div class="flex-shrink-0 mr-4">
-                                        <svg
-                                            class="chevron chevron-inactive"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <polyline
-                                                points="6,9 12,15 18,9"
-                                            ></polyline>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </button>
-                            <div id="faq-answer-4" class="faq-answer">
-                                <div class="px-6 pb-6">
-                                    <div class="border-r-4 pr-4">
-                                        <p
-                                            class="text-gray-600 leading-relaxed"
-                                        >
-                                            نوفر أنواع مختلفة من الكابائن:
-                                            داخلية، بإطلالة بحرية، بشرفة، وأجنحة
-                                            فاخرة. يتم توزيع الكابائن حسب نوع
-                                            الحجز والتوفر. يمكن طلب كابائن
-                                            متجاورة للعائلات عند الحجز.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ Item 6 -->
-                        <div class="faq-item">
-                            <button
-                                class="faq-button"
-                                onclick="toggleAccordion(5)"
-                                aria-expanded="false"
-                                aria-controls="faq-answer-5"
-                            >
-                                <div class="flex items-center justify-between">
-                                    <h3
-                                        class="text-lg font-semibold text-primary pr-4"
-                                    >
-                                        هل يمكن للأطفال السفر؟
-                                    </h3>
-                                    <div class="flex-shrink-0 mr-4">
-                                        <svg
-                                            class="chevron chevron-inactive"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <polyline
-                                                points="6,9 12,15 18,9"
-                                            ></polyline>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </button>
-                            <div id="faq-answer-5" class="faq-answer">
-                                <div class="px-6 pb-6">
-                                    <div class="border-r-4 pr-4">
-                                        <p
-                                            class="text-gray-600 leading-relaxed"
-                                        >
-                                            بالطبع! نرحب بالعائلات ونوفر أنشطة
-                                            وخدمات خاصة للأطفال من جميع الأعمار.
-                                            يحصل الأطفال تحت سن 12 على خصم خاص،
-                                            والرضع تحت سنتين يسافرون مجاناً مع
-                                            تقديم خدمات رعاية الأطفال.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ Item 7 -->
-                        <div class="faq-item">
-                            <button
-                                class="faq-button"
-                                onclick="toggleAccordion(6)"
-                                aria-expanded="false"
-                                aria-controls="faq-answer-6"
-                            >
-                                <div class="flex items-center justify-between">
-                                    <h3
-                                        class="text-lg font-semibold text-primary pr-4"
-                                    >
-                                        ما هي سياسة اللباس على متن السفينة؟
-                                    </h3>
-                                    <div class="flex-shrink-0 mr-4">
-                                        <svg
-                                            class="chevron chevron-inactive"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <polyline
-                                                points="6,9 12,15 18,9"
-                                            ></polyline>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </button>
-                            <div id="faq-answer-6" class="faq-answer">
-                                <div class="px-6 pb-6">
-                                    <div class="border-r-4 pr-4">
-                                        <p
-                                            class="text-gray-600 leading-relaxed"
-                                        >
-                                            اللباس كاجوال مقبول في معظم المناطق
-                                            نهاراً. في المساء، نطلب اللباس
-                                            الأنيق في المطاعم الرئيسية. لدينا
-                                            أمسيات رسمية حيث يُفضل اللباس
-                                            الرسمي. نوفر دليل اللباس المناسب عند
-                                            الحجز.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ Item 8 -->
-                        <div class="faq-item">
-                            <button
-                                class="faq-button"
-                                onclick="toggleAccordion(7)"
-                                aria-expanded="false"
-                                aria-controls="faq-answer-7"
-                            >
-                                <div class="flex items-center justify-between">
-                                    <h3
-                                        class="text-lg font-semibold text-primary pr-4"
-                                    >
-                                        كيف يمكنني التواصل مع الأهل أثناء
-                                        الرحلة؟
-                                    </h3>
-                                    <div class="flex-shrink-0 mr-4">
-                                        <svg
-                                            class="chevron chevron-inactive"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <polyline
-                                                points="6,9 12,15 18,9"
-                                            ></polyline>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </button>
-                            <div id="faq-answer-7" class="faq-answer">
-                                <div class="px-6 pb-6">
-                                    <div class="border-r-4 pr-4">
-                                        <p
-                                            class="text-gray-600 leading-relaxed"
-                                        >
-                                            نوفر خدمة واي فاي في جميع أنحاء
-                                            السفينة مقابل رسوم يومية. كما يمكن
-                                            استخدام الهاتف الدولي من الكابينة.
-                                            نقدم أيضاً خدمات إنترنت مجانية في
-                                            مناطق محددة لفترات قصيرة.
-                                        </p>
-                                    </div>
+                        </button>
+                        <div id="faq-answer-0" class="faq-answer">
+                            <div class="px-6 pb-6">
+                                <div class="border-r-4 pr-4">
+                                    <p class="text-gray-600 leading-relaxed">
+                                        يحتاج المسافرون إلى جواز سفر صالح
+                                        لمدة لا تقل عن 6 أشهر من تاريخ
+                                        السفر، بالإضافة إلى أي تأشيرات
+                                        مطلوبة حسب الوجهة. نحن نساعد في
+                                        توضيح متطلبات كل وجهة عند الحجز.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Contact for more questions -->
-                    <div
-                        class="mt-16 text-center bg-gradient rounded-2xl p-8 text-white"
-                    >
-                        <h3 class="text-2xl font-bold mb-4">
-                            لم تجد إجابة لسؤالك؟
-                        </h3>
-                        <p class="text-lg mb-6 opacity-90">
-                            فريق خدمة العملاء لدينا جاهز لمساعدتك على مدار
-                            الساعة
-                        </p>
-                        <div class="flex flex-col gap-4 justify-center">
-                            <button
-                                class="contact-button contact-button-primary"
-                            >
-                                تواصل معنا
-                            </button>
-                            <button
-                                class="contact-button contact-button-secondary"
-                            >
-                                اتصل بنا: 8001234567
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <!-- Back to top button -->
-            <button
-                class="back-to-top"
-                onclick="scrollToTop()"
-                aria-label="العودة إلى الأعلى"
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                >
-                    <path d="m18 15-6-6-6 6" />
-                </svg>
-            </button>
-
-            <div class="footer-container">
-                <!-- Main Footer Content -->
-                <div class="footer-grid">
-                    <!-- Company Info -->
-                    <div class="company-info">
-                        <div class="company-header">
-                            <div class="company-logo">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="32"
-                                    height="32"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                >
-                                    <circle cx="12" cy="5" r="3" />
-                                    <path d="m2 12 10 10 10-10" />
-                                </svg>
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item">
+                        <button class="faq-button" onclick="toggleAccordion(1)" aria-expanded="false"
+                            aria-controls="faq-answer-1">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold text-primary pr-4">
+                                    هل يمكنني إلغاء الحجز أو تعديله؟
+                                </h3>
+                                <div class="flex-shrink-0 mr-4">
+                                    <svg class="chevron chevron-inactive" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <polyline points="6,9 12,15 18,9"></polyline>
+                                    </svg>
+                                </div>
                             </div>
-                            <div class="company-title">
-                                <h3>أروى كروز</h3>
-                                <p>رحلات بحرية فاخرة</p>
-                            </div>
-                        </div>
-                        <p class="company-description">
-                            نقدم أفضل تجارب الرحلات البحرية في الخليج العربي
-                            والبحر الأحمر، مع خدمة استثنائية ومرافق عالمية
-                            المستوى لضمان رحلة لا تُنسى.
-                        </p>
-
-                        <!-- Contact Info -->
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                >
-                                    <path
-                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-                                    />
-                                </svg>
-                                <a href="tel:8001234567" class="contact-item" title="اتصل بنا">8001234567</a>
-                            </div>
-                            <div class="contact-item">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                >
-                                    <path
-                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                                    />
-                                    <polyline points="22,6 12,13 2,6" />
-                                </svg>
-                                <a href="mailto:info@aroyacruise.com" class="contact-item" title="راسلنا">info@aroyacruise.com</a>
-                            </div>
-                            <div class="contact-item address">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                >
-                                    <path
-                                        d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
-                                    />
-                                    <circle cx="12" cy="10" r="3" />
-                                </svg>
-                                <span
-                                    >ميناء الملك عبد العزيز، جدة، المملكة
-                                    العربية السعودية</span
-                                >
+                        </button>
+                        <div id="faq-answer-1" class="faq-answer">
+                            <div class="px-6 pb-6">
+                                <div class="border-r-4 pr-4">
+                                    <p class="text-gray-600 leading-relaxed">
+                                        نعم، يمكن إلغاء أو تعديل الحجز حسب
+                                        شروط التذكرة المحددة. الإلغاء قبل 30
+                                        يوماً من موعد السفر يخضع لرسوم إلغاء
+                                        25%، وقبل 14 يوماً 50%، وأقل من ذلك
+                                        لا يحق استرداد المبلغ.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Quick Links -->
-                    <div class="footer-section">
-                        <h4>روابط سريعة</h4>
-                        <ul class="footer-links" id="quickLinks">
-                            <!-- Links will be populated by JavaScript -->
-                        </ul>
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item">
+                        <button class="faq-button" onclick="toggleAccordion(2)" aria-expanded="false"
+                            aria-controls="faq-answer-2">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold text-primary pr-4">
+                                    ما هي المرافق المتوفرة على متن السفينة؟
+                                </h3>
+                                <div class="flex-shrink-0 mr-4">
+                                    <svg class="chevron chevron-inactive" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <polyline points="6,9 12,15 18,9"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                        </button>
+                        <div id="faq-answer-2" class="faq-answer">
+                            <div class="px-6 pb-6">
+                                <div class="border-r-4 pr-4">
+                                    <p class="text-gray-600 leading-relaxed">
+                                        تشمل السفينة مطاعم متنوعة، حمامات
+                                        سباحة، سبا، صالة ألعاب رياضية، مسرح،
+                                        كازينو، متاجر، نادي أطفال، وأنشطة
+                                        ترفيهية متنوعة. جميع المرافق مصممة
+                                        لتوفير تجربة مريحة وممتعة.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Support -->
-                    <div class="footer-section">
-                        <h4>الدعم والمساعدة</h4>
-                        <ul class="footer-links" id="supportLinks">
-                            <!-- Links will be populated by JavaScript -->
-                        </ul>
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item">
+                        <button class="faq-button" onclick="toggleAccordion(3)" aria-expanded="false"
+                            aria-controls="faq-answer-3">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold text-primary pr-4">
+                                    هل الوجبات مشمولة في السعر؟
+                                </h3>
+                                <div class="flex-shrink-0 mr-4">
+                                    <svg class="chevron chevron-inactive" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <polyline points="6,9 12,15 18,9"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                        </button>
+                        <div id="faq-answer-3" class="faq-answer">
+                            <div class="px-6 pb-6">
+                                <div class="border-r-4 pr-4">
+                                    <p class="text-gray-600 leading-relaxed">
+                                        نعم، جميع الوجبات الرئيسية مشمولة في
+                                        سعر التذكرة في المطاعم الرئيسية.
+                                        المطاعم المتخصصة والمشروبات الكحولية
+                                        تخضع لرسوم إضافية. نقدم خيارات
+                                        متنوعة تناسب جميع الأذواق والمتطلبات
+                                        الغذائية.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Popular Destinations -->
-                    <div class="footer-section">
-                        <h4>وجهات شائعة</h4>
-                        <ul class="footer-links" id="destinationLinks">
-                            <!-- Links will be populated by JavaScript -->
-                        </ul>
+                    <!-- FAQ Item 5 -->
+                    <div class="faq-item">
+                        <button class="faq-button" onclick="toggleAccordion(4)" aria-expanded="false"
+                            aria-controls="faq-answer-4">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold text-primary pr-4">
+                                    كيف يتم ترتيب الكابائن؟
+                                </h3>
+                                <div class="flex-shrink-0 mr-4">
+                                    <svg class="chevron chevron-inactive" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <polyline points="6,9 12,15 18,9"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                        </button>
+                        <div id="faq-answer-4" class="faq-answer">
+                            <div class="px-6 pb-6">
+                                <div class="border-r-4 pr-4">
+                                    <p class="text-gray-600 leading-relaxed">
+                                        نوفر أنواع مختلفة من الكابائن:
+                                        داخلية، بإطلالة بحرية، بشرفة، وأجنحة
+                                        فاخرة. يتم توزيع الكابائن حسب نوع
+                                        الحجز والتوفر. يمكن طلب كابائن
+                                        متجاورة للعائلات عند الحجز.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Newsletter Subscription -->
-                <div class="newsletter-section">
-                    <div class="newsletter-content">
-                        <h4>اشترك في نشرتنا الإخبارية</h4>
-                        <p>
-                            احصل على أحدث العروض والرحلات الجديدة مباشرة في
-                            بريدك الإلكتروني
-                        </p>
-                        <div class="newsletter-form">
-                            <input
-                                type="email"
-                                placeholder="البريد الإلكتروني"
-                                class="newsletter-input"
-                                id="emailInput"
-                            />
-                            <button
-                                class="newsletter-button"
-                                onclick="subscribeNewsletter()"
-                            >
-                                اشتراك
-                            </button>
+                    <!-- FAQ Item 6 -->
+                    <div class="faq-item">
+                        <button class="faq-button" onclick="toggleAccordion(5)" aria-expanded="false"
+                            aria-controls="faq-answer-5">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold text-primary pr-4">
+                                    هل يمكن للأطفال السفر؟
+                                </h3>
+                                <div class="flex-shrink-0 mr-4">
+                                    <svg class="chevron chevron-inactive" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <polyline points="6,9 12,15 18,9"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                        </button>
+                        <div id="faq-answer-5" class="faq-answer">
+                            <div class="px-6 pb-6">
+                                <div class="border-r-4 pr-4">
+                                    <p class="text-gray-600 leading-relaxed">
+                                        بالطبع! نرحب بالعائلات ونوفر أنشطة
+                                        وخدمات خاصة للأطفال من جميع الأعمار.
+                                        يحصل الأطفال تحت سن 12 على خصم خاص،
+                                        والرضع تحت سنتين يسافرون مجاناً مع
+                                        تقديم خدمات رعاية الأطفال.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 7 -->
+                    <div class="faq-item">
+                        <button class="faq-button" onclick="toggleAccordion(6)" aria-expanded="false"
+                            aria-controls="faq-answer-6">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold text-primary pr-4">
+                                    ما هي سياسة اللباس على متن السفينة؟
+                                </h3>
+                                <div class="flex-shrink-0 mr-4">
+                                    <svg class="chevron chevron-inactive" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <polyline points="6,9 12,15 18,9"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                        </button>
+                        <div id="faq-answer-6" class="faq-answer">
+                            <div class="px-6 pb-6">
+                                <div class="border-r-4 pr-4">
+                                    <p class="text-gray-600 leading-relaxed">
+                                        اللباس كاجوال مقبول في معظم المناطق
+                                        نهاراً. في المساء، نطلب اللباس
+                                        الأنيق في المطاعم الرئيسية. لدينا
+                                        أمسيات رسمية حيث يُفضل اللباس
+                                        الرسمي. نوفر دليل اللباس المناسب عند
+                                        الحجز.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 8 -->
+                    <div class="faq-item">
+                        <button class="faq-button" onclick="toggleAccordion(7)" aria-expanded="false"
+                            aria-controls="faq-answer-7">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold text-primary pr-4">
+                                    كيف يمكنني التواصل مع الأهل أثناء
+                                    الرحلة؟
+                                </h3>
+                                <div class="flex-shrink-0 mr-4">
+                                    <svg class="chevron chevron-inactive" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <polyline points="6,9 12,15 18,9"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                        </button>
+                        <div id="faq-answer-7" class="faq-answer">
+                            <div class="px-6 pb-6">
+                                <div class="border-r-4 pr-4">
+                                    <p class="text-gray-600 leading-relaxed">
+                                        نوفر خدمة واي فاي في جميع أنحاء
+                                        السفينة مقابل رسوم يومية. كما يمكن
+                                        استخدام الهاتف الدولي من الكابينة.
+                                        نقدم أيضاً خدمات إنترنت مجانية في
+                                        مناطق محددة لفترات قصيرة.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Social Media and Bottom -->
-                <div class="footer-bottom">
-                    <div class="footer-bottom-content">
-                        <!-- Social Media
-                        <div class="social-media">
-                            <a href="#" class="social-link" aria-label="فيسبوك">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                >
-                                    <path
-                                        d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
-                                    />
-                                </svg>
-                            </a>
-                            <a href="#" class="social-link" aria-label="تويتر">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                >
-                                    <path
-                                        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
-                                    />
-                                </svg>
-                            </a>
-                            <a
-                                href="#"
-                                class="social-link"
-                                aria-label="إنستغرام"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                >
-                                    <rect
-                                        width="20"
-                                        height="20"
-                                        x="2"
-                                        y="2"
-                                        rx="5"
-                                        ry="5"
-                                    />
-                                    <path
-                                        d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
-                                    />
-                                    <line
-                                        x1="17.5"
-                                        x2="17.51"
-                                        y1="6.5"
-                                        y2="6.5"
-                                    />
-                                </svg>
-                            </a>
-                            <a href="#" class="social-link" aria-label="يوتيوب">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                >
-                                    <path
-                                        d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"
-                                    />
-                                    <path d="m10 15 5-3-5-3z" />
-                                </svg>
-                            </a>
-                        </div> -->
-
-                        <!-- Copyright -->
-                        <div class="copyright">
-                            <p>&copy; 2024 أروى كروز. جميع الحقوق محفوظة.</p>
-                            <p class="small-text">
-                                تصميم وتطوير بمعايير الجودة العالمية
-                            </p>
-                        </div>
+                <!-- Contact for more questions -->
+                <div class="mt-16 text-center bg-gradient rounded-2xl p-8 text-white">
+                    <h3 class="text-2xl font-bold mb-4">
+                        لم تجد إجابة لسؤالك؟
+                    </h3>
+                    <p class="text-lg mb-6 opacity-90">
+                        فريق خدمة العملاء لدي الجولة السعيدة جاهز لمساعدتك على مدار
+                        الساعة
+                    </p>
+                    <div class="flex flex-col gap-4 justify-center">
+                        <button class="contact-button contact-button-primary"
+                            onclick="window.location.href='mailto:book@mycruiseksa.com'">
+                            تواصل معنا عبر الايميل : book@mycruiseksa.com
+                            <i class="fa fa-envelope"></i>
+                        </button>
+                        <button class="contact-button contact-button-primary"
+                            onclick="window.location.href='tel:8001234567'">
+                            اتصل بنا هاتفياً : 966593440901
+                            <i class="fa fa-phone"></i>
+                        </button>
+                        <button class="contact-button contact-button-secondary"
+                            onclick="window.location.href='https://wa.me/966593440901'">
+                            اضغط هنا للتواصل عبر واتساب : 966593440901 <i class="fa-brands fa-whatsapp"></i>
+                        </button>
+                        <button class="contact-button contact-button-secondary"
+                            onclick="window.location.href='https://wa.me/966565059524'">
+                            اضغط هنا للتواصل عبر واتساب : 966565059524
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </button>
                     </div>
                 </div>
             </div>
-        </footer>
+        </section>
+    </main>
 
-        <script src="./js/faq.js"></script>
-        <script src="./js/footer.js"></script>
-        <!-- <script src="./js/gallery.js"></script> -->
-        <script src="./js/hero.js"></script>
-        <script src="./js/nav.js"></script>
-        <script src="./js/search.js"></script>
-        <script src="./js/ship.js"></script>
-        <script src="./js/travel.js"></script>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logos">
+                    <div class="footer-logo">
+                        <img src="./imgs/ncl.jpg" alt="mycruiseksa logo"
+                            style="height: 60px; width: auto; object-fit: contain;">
+                    </div>
+                    <div class="footer-logo">
+                        <img src="https://mycruiseksa.com/wp-content/uploads/explora/imgs/logo/mycruise.svg"
+                            alt="mycruiseksa logo" style="height: 60px; width: auto; object-fit: contain;">
+                    </div>
 
-        <script src="./js/searchBox/bootstrap.min.js"></script>
-        <script src="./js/searchBox/v321jquery.min.js"></script>
-    </body>
+                </div>
+                <p style="margin-top: 10px; font-size: 18px; color: #ffffffcc; line-height: 1.6;">الجولة السعيدة وكلاء
+                    فى
+                    المملكة العربية السعودية لنرويجيان كروز لاين</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/aljawlaalsaeeda" target="_blank" class="social-icon"
+                        aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.snapchat.com/add/aljawlaalsaeeda" target="_blank" class="social-icon"
+                        aria-label="Snapchat">
+                        <i class="fab fa-snapchat-ghost"></i>
+                    </a>
+                    <a href="https://t.me/mycruiseksa" target="_blank" class="social-icon" aria-label="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://web.whatsapp.com/send?phone=966593440901" target="_blank" class="social-icon"
+                        aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://x.com/aljawlaalsaeeda" target="_blank" class="social-icon"
+                        aria-label="X (formerly Twitter)">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+                    <h3 class="footer-title">اتصل بنا</h3>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <p>
+                            شارع ياسر بن عامر الكناني، جدة، المملكة العربية السعودية.
+                        </p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <p>
+                            <a href="https://web.whatsapp.com/send?phone=966593440901">
+                                +966 59 344 0901
+                            </a>
+                        </p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <p>
+                            <a href="https://book.mycruiseksa.com">Book@mycruiseksa.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#travels">الرحلات</a></li>
+                    <li><a href="#ship">السفينة</a></li>
+                    <li><a href="#faq">الأسئلة الشائعة</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>تواصل معنا</h3>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" name="name" placeholder="الاسم" required aria-label="الاسم">
+                    <input type="email" name="email" placeholder="البريد الإلكتروني" required
+                        aria-label="البريد الإلكتروني">
+                    <textarea name="message" rows="3" placeholder="رسالتك" required aria-label="الرسالة"></textarea>
+                    <button type="submit">إرسال</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <picture>
+                <!-- SVG للجوالات - نفترض المقاس 150x45 -->
+                <source srcset="https://mycruiseksa.com/wp-content/uploads/imgs/logo/mycruise.svg" type="image/svg+xml"
+                    media="(max-width: 767px)" width="150" height="140.14">
+
+                <!-- SVG للديسكتوب - نفترض المقاس 200x60 -->
+                <source srcset="https://mycruiseksa.com/wp-content/uploads/imgs/logo/mycruise.svg" type="image/svg+xml"
+                    media="(min-width: 768px)" width="100" height="93.42">
+
+                <!-- Fallback في حالة عدم دعم SVG -->
+                <img src="https://mycruiseksa.com/wp-content/uploads/imgs/logo/mycruise.svg" alt="شعار كروز MSC"
+                    loading="lazy" width="100" height="93.42">
+            </picture>
+
+            <p>
+                حقوق الطبع والنشر © 2025 وكالة الجولة السعيدة للسفر والسياحة.
+                <br> جميع الحقوق محفوظة.
+                مرخصة من وزارة السياحة السعودية رقم 73103997 | السجل التجاري رقم 4030498832 | <a
+                    href="https://book.mycruiseksa.com">Book@mycruiseksa.com</a>
+            </p>
+        </div>
+
+    </footer>
+
+    <script src="./js/faq.js"></script>
+    <script src="./js/footer.js"></script>
+    <!-- <script src="./js/gallery.js"></script> -->
+    <script src="./js/hero.js"></script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/search.js"></script>
+    <script src="./js/ship.js"></script>
+    <script src="./js/travel.js"></script>
+
+    <script src="./js/searchBox/bootstrap.min.js"></script>
+    <script src="./js/searchBox/v321jquery.min.js"></script>
+</body>
+
 </html>
