@@ -12,16 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
-    <!-- My Style Files -->
-    <link rel="stylesheet" href="./css/faq.css" />
-    <link rel="stylesheet" href="./css/footer.css" />
-    <link rel="stylesheet" href="./css/gallery.css" />
-    <link rel="stylesheet" href="./css/hero.css" />
-    <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./css/nav.css" />
-    <link rel="stylesheet" href="./css/search.css" />
+    <!-- Unified Stylesheet -->
+    <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/ship.css" />
-    <link rel="stylesheet" href="./css/travel.css" />
+
 
     <link rel="stylesheet" href="./css/searchBox/cruise-search-form-option-6.css" />
     <link rel="stylesheet" href="./css/searchBox/font-awesome.min.css" />
@@ -396,7 +390,7 @@
                             aria-controls="faq-answer-0">
                             <div class="flex items-center justify-between">
                                 <h3 class="text-lg font-semibold text-primary pr-4">
-                                    ما هي المستندات المطلوبة للسفر؟
+                                    ما هي سياسة الإلغاء الخاصة بـ Norwegian Cruise Line؟
                                 </h3>
                                 <div class="flex-shrink-0 mr-4">
                                     <svg class="chevron chevron-inactive" fill="none" stroke="currentColor"
@@ -407,6 +401,46 @@
                             </div>
                         </button>
                         <div id="faq-answer-0" class="faq-answer">
+                            <div class="px-6 pb-6">
+                                <div class="border-r-4 pr-4">
+                                    <p class="text-gray-600 leading-relaxed">
+                                        تخضع جميع عمليات الإلغاء والتعديل لسياسة الإلغاء الرسمية المعتمدة من
+                                        Norwegian Cruise Line، والتي تتضمن تفاصيل الرسوم والمواعيد النهائية
+                                        والشروط المطبقة. للاطلاع على كافة التفاصيل والبنود، يُرجى مراجعة
+                                        ملف سياسة الإلغاء عبر الرابط التالي:
+                                    </p>
+                                    <a href="https://book.mycruiseksa.com/site/KSA/NCL/ncl_cancellation_Policy-1.pdf"
+                                        target="_blank" rel="noopener noreferrer"
+                                        class="inline-flex items-center gap-2 mt-3 text-primary font-semibold hover:underline">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20"
+                                            height="20">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                        </svg>
+                                        تحميل ملف سياسة الإلغاء (PDF)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item">
+                        <button class="faq-button" onclick="toggleAccordion(1)" aria-expanded="false"
+                            aria-controls="faq-answer-1">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold text-primary pr-4">
+                                    ما هي المستندات المطلوبة للسفر؟
+                                </h3>
+                                <div class="flex-shrink-0 mr-4">
+                                    <svg class="chevron chevron-inactive" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <polyline points="6,9 12,15 18,9"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                        </button>
+                        <div id="faq-answer-1" class="faq-answer">
                             <div class="px-6 pb-6">
                                 <div class="border-r-4 pr-4">
                                     <p class="text-gray-600 leading-relaxed">
@@ -421,10 +455,10 @@
                         </div>
                     </div>
 
-                    <!-- FAQ Item 2 -->
+                    <!-- FAQ Item 3 -->
                     <div class="faq-item">
-                        <button class="faq-button" onclick="toggleAccordion(1)" aria-expanded="false"
-                            aria-controls="faq-answer-1">
+                        <button class="faq-button" onclick="toggleAccordion(2)" aria-expanded="false"
+                            aria-controls="faq-answer-2">
                             <div class="flex items-center justify-between">
                                 <h3 class="text-lg font-semibold text-primary pr-4">
                                     هل يمكنني إلغاء الحجز أو تعديله؟
@@ -437,7 +471,7 @@
                                 </div>
                             </div>
                         </button>
-                        <div id="faq-answer-1" class="faq-answer">
+                        <div id="faq-answer-2" class="faq-answer">
                             <div class="px-6 pb-6">
                                 <div class="border-r-4 pr-4">
                                     <p class="text-gray-600 leading-relaxed">
@@ -452,10 +486,10 @@
                         </div>
                     </div>
 
-                    <!-- FAQ Item 3 -->
+                    <!-- FAQ Item 4 -->
                     <div class="faq-item">
-                        <button class="faq-button" onclick="toggleAccordion(2)" aria-expanded="false"
-                            aria-controls="faq-answer-2">
+                        <button class="faq-button" onclick="toggleAccordion(3)" aria-expanded="false"
+                            aria-controls="faq-answer-3">
                             <div class="flex items-center justify-between">
                                 <h3 class="text-lg font-semibold text-primary pr-4">
                                     ما هي المرافق المتوفرة على متن السفينة؟
@@ -468,7 +502,7 @@
                                 </div>
                             </div>
                         </button>
-                        <div id="faq-answer-2" class="faq-answer">
+                        <div id="faq-answer-3" class="faq-answer">
                             <div class="px-6 pb-6">
                                 <div class="border-r-4 pr-4">
                                     <p class="text-gray-600 leading-relaxed">
@@ -483,10 +517,10 @@
                         </div>
                     </div>
 
-                    <!-- FAQ Item 4 -->
+                    <!-- FAQ Item 5 -->
                     <div class="faq-item">
-                        <button class="faq-button" onclick="toggleAccordion(3)" aria-expanded="false"
-                            aria-controls="faq-answer-3">
+                        <button class="faq-button" onclick="toggleAccordion(4)" aria-expanded="false"
+                            aria-controls="faq-answer-4">
                             <div class="flex items-center justify-between">
                                 <h3 class="text-lg font-semibold text-primary pr-4">
                                     هل الوجبات مشمولة في السعر؟
@@ -499,7 +533,7 @@
                                 </div>
                             </div>
                         </button>
-                        <div id="faq-answer-3" class="faq-answer">
+                        <div id="faq-answer-4" class="faq-answer">
                             <div class="px-6 pb-6">
                                 <div class="border-r-4 pr-4">
                                     <p class="text-gray-600 leading-relaxed">
@@ -515,10 +549,10 @@
                         </div>
                     </div>
 
-                    <!-- FAQ Item 5 -->
+                    <!-- FAQ Item 6 -->
                     <div class="faq-item">
-                        <button class="faq-button" onclick="toggleAccordion(4)" aria-expanded="false"
-                            aria-controls="faq-answer-4">
+                        <button class="faq-button" onclick="toggleAccordion(5)" aria-expanded="false"
+                            aria-controls="faq-answer-5">
                             <div class="flex items-center justify-between">
                                 <h3 class="text-lg font-semibold text-primary pr-4">
                                     كيف يتم ترتيب الكابائن؟
@@ -531,7 +565,7 @@
                                 </div>
                             </div>
                         </button>
-                        <div id="faq-answer-4" class="faq-answer">
+                        <div id="faq-answer-5" class="faq-answer">
                             <div class="px-6 pb-6">
                                 <div class="border-r-4 pr-4">
                                     <p class="text-gray-600 leading-relaxed">
@@ -546,10 +580,10 @@
                         </div>
                     </div>
 
-                    <!-- FAQ Item 6 -->
+                    <!-- FAQ Item 7 -->
                     <div class="faq-item">
-                        <button class="faq-button" onclick="toggleAccordion(5)" aria-expanded="false"
-                            aria-controls="faq-answer-5">
+                        <button class="faq-button" onclick="toggleAccordion(6)" aria-expanded="false"
+                            aria-controls="faq-answer-6">
                             <div class="flex items-center justify-between">
                                 <h3 class="text-lg font-semibold text-primary pr-4">
                                     هل يمكن للأطفال السفر؟
@@ -562,7 +596,7 @@
                                 </div>
                             </div>
                         </button>
-                        <div id="faq-answer-5" class="faq-answer">
+                        <div id="faq-answer-6" class="faq-answer">
                             <div class="px-6 pb-6">
                                 <div class="border-r-4 pr-4">
                                     <p class="text-gray-600 leading-relaxed">
@@ -577,10 +611,10 @@
                         </div>
                     </div>
 
-                    <!-- FAQ Item 7 -->
+                    <!-- FAQ Item 8 -->
                     <div class="faq-item">
-                        <button class="faq-button" onclick="toggleAccordion(6)" aria-expanded="false"
-                            aria-controls="faq-answer-6">
+                        <button class="faq-button" onclick="toggleAccordion(7)" aria-expanded="false"
+                            aria-controls="faq-answer-7">
                             <div class="flex items-center justify-between">
                                 <h3 class="text-lg font-semibold text-primary pr-4">
                                     ما هي سياسة اللباس على متن السفينة؟
@@ -593,7 +627,7 @@
                                 </div>
                             </div>
                         </button>
-                        <div id="faq-answer-6" class="faq-answer">
+                        <div id="faq-answer-7" class="faq-answer">
                             <div class="px-6 pb-6">
                                 <div class="border-r-4 pr-4">
                                     <p class="text-gray-600 leading-relaxed">
@@ -609,10 +643,10 @@
                         </div>
                     </div>
 
-                    <!-- FAQ Item 8 -->
+                    <!-- FAQ Item 9 -->
                     <div class="faq-item">
-                        <button class="faq-button" onclick="toggleAccordion(7)" aria-expanded="false"
-                            aria-controls="faq-answer-7">
+                        <button class="faq-button" onclick="toggleAccordion(8)" aria-expanded="false"
+                            aria-controls="faq-answer-8">
                             <div class="flex items-center justify-between">
                                 <h3 class="text-lg font-semibold text-primary pr-4">
                                     كيف يمكنني التواصل مع الأهل أثناء
@@ -626,7 +660,7 @@
                                 </div>
                             </div>
                         </button>
-                        <div id="faq-answer-7" class="faq-answer">
+                        <div id="faq-answer-8" class="faq-answer">
                             <div class="px-6 pb-6">
                                 <div class="border-r-4 pr-4">
                                     <p class="text-gray-600 leading-relaxed">
@@ -687,7 +721,7 @@
                             style="height: 60px; width: auto; object-fit: contain;">
                     </div>
                     <div class="footer-logo">
-                        <img src="https://mycruiseksa.com/wp-content/uploads/explora/imgs/logo/mycruise.svg"
+                        <img src="https://mycruiseksa.com/wp-content/Aljawla_Alsaeeda/Aljawla_Alsaeeda.png"
                             alt="mycruiseksa logo" style="height: 60px; width: auto; object-fit: contain;">
                     </div>
 
@@ -707,13 +741,17 @@
                     <a href="https://t.me/mycruiseksa" target="_blank" class="social-icon" aria-label="Telegram">
                         <i class="fab fa-telegram"></i>
                     </a>
-                    <a href="https://web.whatsapp.com/send?phone=966593440901" target="_blank" class="social-icon"
+                    <a href="https://web.whatsapp.com/send?phone=966920017168" target="_blank" class="social-icon"
                         aria-label="WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                     <a href="https://x.com/aljawlaalsaeeda" target="_blank" class="social-icon"
                         aria-label="X (formerly Twitter)">
                         <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/aljawla-alsaeeda/?viewAsMember=true" target="_blank"
+                        class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
                     </a>
                 </div>
             </div>
@@ -733,8 +771,8 @@
                             <i class="fas fa-phone-alt"></i>
                         </div>
                         <p>
-                            <a href="https://web.whatsapp.com/send?phone=966593440901">
-                                +966 59 344 0901
+                            <a href="https://web.whatsapp.com/send?phone=966920017168">
+                                +966920017168
                             </a>
                         </p>
                     </div>
@@ -775,20 +813,20 @@
         <div class="footer-bottom">
             <picture>
                 <!-- SVG للجوالات - نفترض المقاس 150x45 -->
-                <source srcset="https://mycruiseksa.com/wp-content/uploads/imgs/logo/mycruise.svg" type="image/svg+xml"
-                    media="(max-width: 767px)" width="150" height="140.14">
+                <source srcset="https://mycruiseksa.com/wp-content/Aljawla_Alsaeeda/Aljawla_Alsaeeda.png"
+                    type="image/svg+xml" media="(max-width: 767px)" width="150" height="140.14">
 
                 <!-- SVG للديسكتوب - نفترض المقاس 200x60 -->
-                <source srcset="https://mycruiseksa.com/wp-content/uploads/imgs/logo/mycruise.svg" type="image/svg+xml"
-                    media="(min-width: 768px)" width="100" height="93.42">
+                <source srcset="https://mycruiseksa.com/wp-content/Aljawla_Alsaeeda/Aljawla_Alsaeeda.png"
+                    type="image/svg+xml" media="(min-width: 768px)" width="100" height="93.42">
 
                 <!-- Fallback في حالة عدم دعم SVG -->
-                <img src="https://mycruiseksa.com/wp-content/uploads/imgs/logo/mycruise.svg" alt="شعار كروز MSC"
+                <img src="https://mycruiseksa.com/wp-content/Aljawla_Alsaeeda/Aljawla_Alsaeeda.png" alt="شعار كروز MSC"
                     loading="lazy" width="100" height="93.42">
             </picture>
 
             <p>
-                حقوق الطبع والنشر © 2025 وكالة الجولة السعيدة للسفر والسياحة.
+                حقوق الطبع والنشر © 2026 وكالة الجولة السعيدة للسفر والسياحة.
                 <br> جميع الحقوق محفوظة.
                 مرخصة من وزارة السياحة السعودية رقم 73103997 | السجل التجاري رقم 4030498832 | <a
                     href="https://book.mycruiseksa.com">Book@mycruiseksa.com</a>
